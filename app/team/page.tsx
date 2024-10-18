@@ -10,6 +10,7 @@ interface TeamMember {
   position: string;
   image: string;
   email: string;
+  jobDescription: string;
 }
 
 interface RandomUserApiResponse {
@@ -25,6 +26,13 @@ interface RandomUserApiResponse {
   }[];
 }
 
+const jobDescriptions = {
+  'Property Manager': 'Oversees property operations, tenant relations, and maintenance coordination.',
+  'Real Estate Agent': 'Assists clients in buying, selling, and renting properties.',
+  'Financial Advisor': 'Provides financial planning and investment advice to clients.',
+  'Marketing Specialist': 'Develops and implements marketing strategies to promote properties and services.'
+};
+
 const TeamPage: React.FC = () => {
   const [propertyManager, setPropertyManager] = useState<TeamMember | null>(null);
   const [otherMembers, setOtherMembers] = useState<TeamMember[]>([]);
@@ -34,13 +42,17 @@ const TeamPage: React.FC = () => {
     fetch('https://randomuser.me/api/?results=9')
       .then(response => response.json())
       .then((data: RandomUserApiResponse) => {
-        const formattedTeamMembers = data.results.map((user, index) => ({
-          id: index,
-          name: `${user.name.first} ${user.name.last}`,
-          position: index === 0 ? 'Property Manager' : ['Real Estate Agent', 'Financial Advisor', 'Marketing Specialist'][index % 3],
-          image: user.picture.large,
-          email: user.email
-        }));
+        const formattedTeamMembers = data.results.map((user, index) => {
+          const position = index === 0 ? 'Property Manager' : ['Real Estate Agent', 'Financial Advisor', 'Marketing Specialist'][index % 3];
+          return {
+            id: index,
+            name: `${user.name.first} ${user.name.last}`,
+            position: position,
+            image: user.picture.large,
+            email: user.email,
+            jobDescription: jobDescriptions[position as keyof typeof jobDescriptions]
+          };
+        });
         
         setPropertyManager(formattedTeamMembers[0]);
         setOtherMembers(formattedTeamMembers.slice(1));
@@ -73,6 +85,7 @@ const TeamPage: React.FC = () => {
               <h3 className={styles.memberName}>{propertyManager.name}</h3>
               <p className={styles.memberPosition}>{propertyManager.position}</p>
               <p className={styles.memberEmail}>{propertyManager.email}</p>
+              <p className={styles.memberJobDescription}>{propertyManager.jobDescription}</p>
             </div>
           </div>
         )}
@@ -87,6 +100,7 @@ const TeamPage: React.FC = () => {
                 <h3 className={styles.memberName}>{member.name}</h3>
                 <p className={styles.memberPosition}>{member.position}</p>
                 <p className={styles.memberEmail}>{member.email}</p>
+                <p className={styles.memberJobDescription}>{member.jobDescription}</p>
               </div>
             </div>
           ))}
