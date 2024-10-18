@@ -48,8 +48,8 @@ export default function Home() {
         </section>
 
         <section className={styles.testimonials}>
-          <h2>What Our Clients Say</h2>
-          <p className={styles.testimonialSubtitle}>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+          <h2>Testimoni Klien: </h2>
+          <p className={styles.testimonialSubtitle}>Mereka telah merasakan keunggulan layanan properti kami. Bagaimana dengan Anda?</p>
           <TestimonialCarousel />
         </section>
       </main>
