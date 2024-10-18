@@ -12,6 +12,19 @@ interface TeamMember {
   email: string;
 }
 
+interface RandomUserApiResponse {
+  results: {
+    name: {
+      first: string;
+      last: string;
+    };
+    picture: {
+      large: string;
+    };
+    email: string;
+  }[];
+}
+
 const TeamPage: React.FC = () => {
   const [propertyManager, setPropertyManager] = useState<TeamMember | null>(null);
   const [otherMembers, setOtherMembers] = useState<TeamMember[]>([]);
@@ -20,8 +33,8 @@ const TeamPage: React.FC = () => {
   useEffect(() => {
     fetch('https://randomuser.me/api/?results=9')
       .then(response => response.json())
-      .then(data => {
-        const formattedTeamMembers = data.results.map((user: any, index: number) => ({
+      .then((data: RandomUserApiResponse) => {
+        const formattedTeamMembers = data.results.map((user, index) => ({
           id: index,
           name: `${user.name.first} ${user.name.last}`,
           position: index === 0 ? 'Property Manager' : ['Real Estate Agent', 'Financial Advisor', 'Marketing Specialist'][index % 3],
@@ -55,14 +68,14 @@ const TeamPage: React.FC = () => {
                 objectFit="cover" 
                 className={styles.memberImage} 
               />
+            </div>
+            <div className={styles.memberInfo}>
+              <h3 className={styles.memberName}>{propertyManager.name}</h3>
+              <p className={styles.memberPosition}>{propertyManager.position}</p>
+              <p className={styles.memberEmail}>{propertyManager.email}</p>
+            </div>
           </div>
-    <div className={styles.memberInfo}>
-      <h3 className={styles.memberName}>{propertyManager.name}</h3>
-      <p className={styles.memberPosition}>{propertyManager.position}</p>
-      <p className={styles.memberEmail}>{propertyManager.email}</p>
-    </div>
-  </div>
-)}
+        )}
         
         <div className={styles.teamGrid}>
           {otherMembers.map((member) => (
