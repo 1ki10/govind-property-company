@@ -1,0 +1,151 @@
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.propertyCardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.propertyCard {
+  flex: 0 0 calc(33.333% - 20px);
+  margin: 0 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.left, .right {
+  opacity: 0.7;
+  transform: scale(0.9);
+  filter: blur(2px);
+}
+
+.center {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.statusBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.beli {
+  background-color: #4CAF50;
+}
+
+.sewa {
+  background-color: #2196F3;
+}
+
+.propertyInfo {
+  padding: 15px;
+}
+
+.propertyInfo h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.propertyInfo h4 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.price {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #295F98;
+}
+
+.type {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.sliderButton {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  color: #295F98;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.sliderButton:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1e4b7a;
+}
+
+@media (max-width: 768px) {
+  .propertyCard {
+    flex: 0 0 calc(50% - 20px);
+  }
+  
+  .left, .right {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  .propertyCard {
+    flex: 0 0 calc(100% - 20px);
+  }
+  
+  .left, .right {
+    display: none;
+  }
+  
+  .propertyInfo h3 {
+    font-size: 1rem;
+  }
+  .propertyInfo h4,
+  .price,
+  .type {
+    font-size: 0.9rem;
+  }
+}

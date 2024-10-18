@@ -1,0 +1,19 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .info {
+    padding: 15px;
+  }
+  
+  .location {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    color: #007bff;
+  }

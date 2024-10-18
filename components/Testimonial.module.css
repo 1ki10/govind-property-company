@@ -1,0 +1,49 @@
+.testimonial {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.rating {
+  margin-bottom: 1rem;
+}
+
+.starFilled {
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+.comment {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.info {
+  text-align: left;
+}
+
+.name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.role {
+  color: #777;
+  margin: 0;
+}

@@ -1,0 +1,241 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.heroContent {
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.heroContent h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.cta {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #cdaa7d;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta:hover {
+  background-color: #b8935f;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.featuredProperties {
+  padding: 4rem 2rem;
+  background-color: #CDC2A5;
+}
+
+.sellRent {
+  padding: 4rem 2rem;
+  background-color: #E1D7C6;
+}
+
+.sellRentContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sellRentTitle {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.sellRentFlexContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.sellRentText {
+  flex: 1;
+}
+
+.sellRentDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.sellRentImage {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.sellRentImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials {
+  padding: 4rem 0;
+  background-color: #EAE4DD;
+  text-align: center;
+}
+
+.testimonialSubtitle {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #777;
+}
+
+.footer {
+  background-color: #f7f7f7;
+  color: #555;
+  padding: 3rem 0 1rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footerSection {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.footerSection h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.footerSection p {
+  margin-bottom: 0.5rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  color: #555;
+  transition: background-color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  background-color: #295F98;
+  color: white;
+}
+
+
+@media (max-width: 1024px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroContent h2 {
+    font-size: 1.3rem;
+  }
+
+  .sellRentTitle {
+    font-size: 2rem;
+  }
+  
+  .sellRentDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent h2 {
+    font-size: 1.1rem;
+  }
+
+  .sellRentFlexContainer {
+    flex-direction: column;
+  }
+
+  .sellRentImage {
+    flex: 0 0 auto;
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .footerContent {
+    flex-direction: column;
+  }
+
+  .footerSection {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent h1 {
+    font-size: 1.8rem;
+  }
+
+  .heroContent h2 {
+    font-size: 1rem;
+  }
+
+  .cta {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .sellRentTitle {
+    font-size: 1.8rem;
+  }
+
+  .sellRentDescription {
+    font-size: 0.9rem;
+  }
+}

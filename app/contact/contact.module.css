@@ -1,0 +1,170 @@
+.pageWrapper {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 60px; 
+  background-color: #F9F7E4; /* Warna latar belakang baru */
+}
+
+.contactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 2rem; 
+  font-family: Arial, sans-serif;
+}
+
+.contactContent {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.contactInfo {
+  flex: 1;
+  min-width: 300px;
+}
+
+.title {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.infoItem img {
+  margin-right: 1rem;
+  width: 24px;
+  height: 24px;
+}
+
+.contactForm {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.formRow .formGroup {
+  flex: 1;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contactForm textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: #c0a080;
+  color: white;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: #a88860;
+}
+
+.socialLinks {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #295F98;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  background-color: #1e4b7a;
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    padding-top: 4rem;
+  }
+
+  .contactContent {
+    flex-direction: column;
+  }
+
+  .contactInfo,
+  .contactForm {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .formRow {
+    flex-direction: column;
+  }
+
+  .socialLinks {
+    position: static;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactContainer {
+    padding: 3rem 1rem 1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .contactForm input,
+  .contactForm textarea,
+  .submitButton {
+    font-size: 0.9rem;
+  }
+}

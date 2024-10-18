@@ -1,0 +1,139 @@
+.propertiesContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 2rem 2rem;
+}
+
+.title {
+  color: #295F98;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.searchContainer {
+  margin-bottom: 2rem;
+}
+
+.searchBar {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.searchButton {
+  padding: 0.75rem 1rem;
+  background-color: #295F98;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.filterButton.active {
+  background-color: #295F98;
+  color: white;
+}
+
+.filterSelect, .sortSelect {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.listingType {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(41, 95, 152, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.propertiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.propertyCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.propertyInfo {
+  padding: 1rem;
+}
+
+.propertyInfo h3 {
+  color: #295F98;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-weight: bold;
+  color: #295F98;
+}
+
+.type {
+  background-color: #f0f0f0;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .propertiesContainer {
+    padding-top: 60px; /* Mengurangi padding untuk layar yang lebih kecil */
+  }
+
+  .filterContainer {
+    flex-direction: column;
+  }
+  
+  .filterButton, .filterSelect, .sortSelect {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .propertiesContainer {
+    padding-top: 50px; /* Mengurangi lagi untuk layar mobile */
+  }
+}

@@ -1,0 +1,162 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.teamContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  color: #295F98;
+  margin-bottom: 2rem;
+}
+
+.propertyManager {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  background-color: #f0f8ff;
+  border: 2px solid #295F98;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.propertyManager .memberImageWrapper {
+  width: 100%;
+  padding-top: 75%;
+  position: relative;
+}
+
+.propertyManager .memberInfo {
+  padding: 1rem;
+  text-align: center;
+}
+
+.propertyManager .memberName {
+  font-size: 1.5rem;
+  color: #295F98;
+  margin-bottom: 0.5rem;
+}
+
+.propertyManager .memberPosition {
+  font-size: 1.2rem;
+  color: #295F98;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.propertyManager .memberEmail {
+  font-size: 1rem;
+  color: #666;
+}
+
+.teamGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.teamMemberCard {
+  flex: 0 1 calc(25% - 1rem); /* Adjust for 4 cards per row */
+  max-width: calc(25% - 1rem);
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.teamMemberCard:hover {
+  transform: translateY(-5px);
+}
+
+.memberImageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+.memberImage {
+  border-radius: 0;
+}
+
+.memberInfo {
+  padding: 1rem;
+}
+
+.memberName {
+  font-size: 1.2rem;
+  color: #295F98;
+  margin-bottom: 0.25rem;
+}
+
+.propertyManager .memberName {
+  font-size: 1.5rem;
+}
+
+.memberPosition {
+  font-size: 1rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.propertyManager .memberPosition {
+  font-size: 1.2rem;
+  color: #295F98;
+  font-weight: bold;
+}
+
+.memberEmail {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 1024px) {
+  .teamMemberCard {
+    flex: 0 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .propertyManager {
+    max-width: 100%;
+  }
+
+  .propertyManager .memberImageWrapper {
+    padding-top: 56.25%;
+  }
+
+  .propertyManager .memberInfo {
+    text-align: center;
+  }
+
+  .teamMemberCard {
+    flex: 0 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .teamMemberCard {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,126 @@
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  background-color: #f8f8f8;
+  padding: 4rem 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.videoSection {
+  margin-bottom: 3rem;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.historySection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  background-color: #f8f8f8;
+  padding: 2rem;
+}
+
+.founderImage {
+  margin-right: 2rem;
+  border-radius: 8px;
+}
+
+.historyText {
+  flex: 1;
+}
+
+.companyOverview {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.imageGallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.imageGallery img {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .historySection {
+    flex-direction: column;
+  }
+
+  .founderImage {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .imageGallery {
+    justify-content: center;
+  }
+
+  .imageGallery img {
+    margin: 0 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutContainer {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
