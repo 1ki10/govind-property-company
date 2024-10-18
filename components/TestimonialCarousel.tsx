@@ -13,6 +13,16 @@ interface User {
   login: { username: string };
 }
 
+const testimonials = [
+  "Govind Property membantu saya menemukan rumah impian dengan cepat dan mudah. Layanan mereka sangat profesional dan perhatian terhadap detail.",
+  "Sebagai investor, saya sangat terkesan dengan portofolio properti yang ditawarkan Govind. Mereka benar-benar memahami pasar dan kebutuhan klien.",
+  "Proses penjualan rumah saya berjalan lancar berkat tim Govind Property. Mereka memberikan saran yang berharga dan dukungan penuh sepanjang prosesnya.",
+  "Govind Property menawarkan pilihan properti yang luar biasa. Agen mereka sangat berpengetahuan dan selalu siap membantu. Sangat merekomendasikan!",
+  "Sebagai pembeli rumah pertama, saya merasa terbantu oleh panduan Govind Property. Mereka membuat proses yang rumit menjadi mudah dipahami dan menyenangkan."
+];
+
+const roles = ["Pemilik Rumah", "Investor Properti", "Penjual Properti", "Pembeli Properti", "Pembeli Rumah Pertama"];
+
 const TestimonialCarousel = () => {
   const [users, setUsers] = useState<User[]>([]);
 
@@ -53,9 +63,9 @@ const TestimonialCarousel = () => {
         <Testimonial
           key={user.login.username}
           name={`${user.name.first} ${user.name.last}`}
-          role={["Designer", "Store Owner", "Freelancer", "Entrepreneur", "Developer"][index % 5]}
+          role={roles[index % roles.length]}
           image={user.picture.large}
-          comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          comment={testimonials[index]}
         />
       ))}
     </Slider>
